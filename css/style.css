@@ -1,0 +1,296 @@
+/*---Browser reset---*/
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*---Title w/horizontal lines---*/
+.title-container {
+    width: 63%;
+    height: auto;
+    margin: auto;
+    padding: 2em 0em 2em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title{
+    color: #494f4e;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+hr{
+    color: grey;
+    opacity: 0.4;
+    width: 33%;
+}
+
+.diamond-icon {
+    width: 12px;
+    padding: 0em 2em 0em 2em;
+}
+
+
+/*---Main container to hold profile cards---*/
+.team-container {
+    margin: auto;
+    width: 63%;
+    height: 220vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-card {
+    width: 353px;
+    height: 450px;
+    margin: 30px 10px 30px 10px;
+}
+
+#card-one {
+    background-image: url(../images/card1.png);
+}
+
+#card-two {
+    background-image: url(../images/card2.png);
+    background-size: cover;
+}
+
+#card-three {
+    width: 353px;
+    height: 450px;
+}
+
+#card-four {
+    background-image: url(../images/card4.png);
+}
+
+#card-five {
+    background-image: url(../images/card5.png);
+    background-size: cover;
+}
+
+#card-six {
+    background-image: url(../images/card6.png);
+    background-size: cover;
+}
+
+#card-eight {
+    background-image: url(../images/card8.png);
+}
+
+#card-nine {
+    background-image: url(../images/card9.png);
+}
+
+#card-ten {
+    background-image: url(../images/card10.png);
+}
+
+#card-eleven {
+    background-color: #eef1f2;
+    display: flex;
+}
+
+
+/*---Quotes that are in cards---*/
+.quotes{
+    width: 50px;
+    padding-bottom: 1em;
+}
+
+.hemingway {
+    width: 69%;
+    position: relative;
+    float: right;
+    top: 55%;
+}
+
+.thompson {
+    width: 67%;
+    position: relative;
+    top: 50%;
+}
+
+.quote {
+    font-size: 16px;
+    color: #6e8592;
+    line-height: 2em;
+}
+
+.author {
+    color: #c75d49;
+}
+
+
+/*---"Join Our Team" Card---*/
+.join-our-team{
+    width: 75%;
+    margin: auto;
+}
+
+.join {
+    color: #364055;
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.join2 {
+    font-weight: 600;
+    color: #364055;
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 2em;
+}
+
+/*---Bottom horizontal line---*/
+.bottom-line{
+    padding: 2em 0em 2em 0em;
+    width: 63%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-rule{
+    width: 46%;
+}
+
+
+/*--Company logo--*/
+.logo {
+    width: 150px;
+    position: absolute;
+    left: 53%;
+    top: 214%;
+}
+
+/*---Media Queries---*/
+@media screen and (max-width: 1440px) { /*--Large Laptop--*/
+    .title-container, .team-container, .bottom-line{
+        width: 80%;
+    }
+
+    .team-container {
+        height: 300vh;
+    }
+
+    .logo {
+        left: 55%;
+        top: 288%;
+    }
+}
+
+@media screen and (max-width: 1366px) { /*--Medium Laptop--*/
+    .team-container{
+        height: 300vh;
+    }
+
+    .page-title{
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 1024px) { /*--Small Laptop--*/
+    .title-container, .bottom-line{
+        width: 90%;
+    }
+
+    .team-container {
+        width: 90%;
+        height: 230vh;
+        margin: auto;
+    }
+
+    .profile-card {
+        width: 275px;
+        height: 372px;
+    }
+
+    #card-three {
+        width: 275px;
+        height: 372px;
+    }
+
+    .hemingway {
+        position: relative;
+        top: 30%;
+    }
+
+    .logo {
+        top: 228%;
+    }
+}
+
+@media screen and (max-width: 768px) { /*--Tablet--*/
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        height: 375vh;
+    }
+
+    .profile-card {
+        width: 300px;
+        height: 397px;
+        margin: auto;
+    }
+
+    .hemingway {
+        float: left;
+    }
+
+    .logo {
+        top: 372%;
+        left: 33%;
+    }
+}
+
+@media screen and (max-width: 425px) { /*--Large Phone--*/
+    .team-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+        height: 675vh;
+    }
+
+    .profile-card {
+        width: 353px;
+        height: 450px;
+    }
+
+    .logo {
+        top: 680%;
+    }
+
+    .bottom-line {
+        padding-top: 5em;
+    }
+
+
+}
+
+@media screen and (max-width: 375px) { /*--Small Phone--*/
+    .profile-card {
+        width: 300px;
+        height: 397px;
+    }
+
+    .logo{
+        left: 30%;
+    }
+}
+
